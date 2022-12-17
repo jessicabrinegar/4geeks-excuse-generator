@@ -5,7 +5,37 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
+//chose random # between 0 and maxValue
+function randInt(maxValue) {
+  return Math.floor(Math.random() * maxValue);
+}
+//choose random instance from array
+function chooseRandom(arr) {
+  let randomIndex = randInt(arr.length);
+  var choice = arr[randomIndex];
+  return choice;
+}
+
+let who = [
+  "My roommate ",
+  "My beloved grandmother ",
+  "My boss ",
+  "The neighborhood trash panda "
+];
+let action = ["ate ", "peed on ", "hid ", "stole "];
+let what = ["my homework ", "the keys to my car ", "my car ", "my sanity "];
+let when = [
+  "before I came to class!",
+  "right before I left for school!",
+  "while I was watching Ted Lasso!",
+  "so quickly I couldn't stop it!"
+];
+
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  let excuse = document.getElementById("excuse");
+  excuse.innerHTML =
+    chooseRandom(who) +
+    chooseRandom(action) +
+    chooseRandom(what) +
+    chooseRandom(when);
 };
