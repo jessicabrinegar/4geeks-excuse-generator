@@ -2,9 +2,6 @@
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
 //chose random # between 0 and maxValue
 function randInt(maxValue) {
   return Math.floor(Math.random() * maxValue);
